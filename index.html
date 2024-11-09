@@ -3,19 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Image with Border</title>
+  <title>Custom Border with Thicker Top Left Corner</title>
   <style>
-    img {
-      border: 5px solid rgba(0, 0, 0, 0.5); /* Black border with opacity */
-      border-radius: 10px; /* Rounded corners */
-      transition: transform 0.3s ease;
+    /* Style for the image container */
+    .image-container {
+      display: inline-block;
+      position: relative;
+      /* Custom border: thicker top-left corner, thinner on other sides */
+      border-top: 20px solid rgba(0, 0, 0, 0.8); /* Thicker top border */
+      border-left: 10px solid rgba(0, 0, 0, 0.8); /* Thicker left border */
+      border-right: 2px solid rgba(0, 0, 0, 0.6); /* Thinner right border */
+      border-bottom: 2px solid rgba(0, 0, 0, 0.6); /* Thinner bottom border */
+      border-radius: 8px; /* Optional: rounded corners */
+      overflow: hidden; /* To make sure the border doesn’t extend beyond the image */
+      transition: transform 0.3s ease; /* Smooth scale effect on hover */
     }
-    img:hover {
+
+    /* Style for the image itself */
+    .image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease; /* Smooth scaling of the image */
+    }
+
+    /* Hover effect for the image and container */
+    .image-container:hover {
       transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1); /* Zoom effect on the image itself */
     }
   </style>
 </head>
 <body>
-  <img src="Kubera.jpg" alt="Image" />
+
+  <div class="image-container">
+    <img src="Kubera.jpg" alt="Image with custom border" />
+  </div>
+
 </body>
 </html>
