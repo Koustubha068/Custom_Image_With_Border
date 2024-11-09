@@ -3,44 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Border with Thicker Top Left Corner</title>
+  <title>Parallax Effect</title>
   <style>
-    /* Style for the image container */
-    .image-container {
-      display: inline-block;
+    /* Parallax container */
+    .parallax-container {
       position: relative;
-      /* Custom border: thicker top-left corner, thinner on other sides */
-      border-top: 10px solid rgba(0, 0, 0, 0.8); /* Thicker top border */
-      border-left: 10px solid rgba(0, 0, 0, 0.8); /* Thicker left border */
-      border-right: 2px solid rgba(0, 0, 0, 0.6); /* Thinner right border */
-      border-bottom: 2px solid rgba(0, 0, 0, 0.6); /* Thinner bottom border */
-      border-radius: 8px; /* Optional: rounded corners */
-      overflow: hidden; /* To make sure the border doesn’t extend beyond the image */
-      transition: transform 0.3s ease; /* Smooth scale effect on hover */
+      height: 500px; /* You can adjust the height */
+      overflow: hidden;
     }
 
-    /* Style for the image itself */
-    .image-container img {
-      display: block;
+    /* The parallax background image */
+    .parallax {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      transition: transform 0.3s ease; /* Smooth scaling of the image */
+      height: 100%;
+      background-image: url('https://example.com/your-image.jpg'); /* Replace with your image URL */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateZ(0); /* Optimize for parallax effect */
     }
 
-    /* Hover effect for the image and container */
-    .image-container:hover {
-      transform: scale(1.05); /* Slight zoom effect on hover */
+    /* Content that scrolls on top of the background */
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 100px 20px; /* Adjust the padding to fit your content */
+      color: white; /* Text color */
     }
 
-    .image-container img:hover {
-      transform: scale(1.1); /* Zoom effect on the image itself */
+    /* Optional: Styling for the heading */
+    h1 {
+      font-size: 3em; /* Adjust font size */
+      margin-bottom: 20px;
+    }
+
+    /* Optional: Styling for paragraph text */
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
 
-  <div class="image-container">
-    <img src="Kubera.jpg" alt="Image with custom border" />
+  <!-- Parallax Section -->
+  <div class="parallax-container">
+    <div class="parallax"></div>
+    <div class="content">
+      <h1>Welcome To KuberaKids!</h1>
+      <p>Building Bright Financial Futures, One Kid at a Time!</p>
+    </div>
   </div>
 
 </body>
