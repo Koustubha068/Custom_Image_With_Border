@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parallax Effect</title>
+  <title>Parallax Effect with Color/Gradient</title>
   <style>
     /* Parallax container */
     .parallax-container {
       position: relative;
-      height: 500px; /* You can adjust the height */
+      height: 500px; /* Adjust the height for the parallax section */
       overflow: hidden;
     }
 
-    /* The parallax background image */
+    /* Parallax background (gradient or color) */
     .parallax {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('https://example.com/your-image.jpg'); /* Replace with your image URL */
-      background-attachment: fixed;
+      /* You can use a solid color or a gradient */
+      background-image: url('background.jpg'); /* Gradient example */
+      background-attachment: fixed; /* Keeps the background fixed for the parallax effect */
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      transform: translateZ(0); /* Optimize for parallax effect */
+      transform: translateZ(0); /* Optimizing for parallax */
     }
 
     /* Content that scrolls on top of the background */
@@ -32,17 +33,17 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      padding: 100px 20px; /* Adjust the padding to fit your content */
+      padding: 100px 20px; /* Adjust the padding to suit your content */
       color: white; /* Text color */
     }
 
     /* Optional: Styling for the heading */
     h1 {
-      font-size: 3em; /* Adjust font size */
+      font-size: 3em; /* Adjust the font size for the title */
       margin-bottom: 20px;
     }
 
-    /* Optional: Styling for paragraph text */
+    /* Optional: Styling for the paragraph text */
     p {
       font-size: 1.2em;
       max-width: 600px;
@@ -60,6 +61,12 @@
       <p>Building Bright Financial Futures, One Kid at a Time!</p>
     </div>
   </div>
+
+  <!-- Next Section -->
+  <section id="next-section" style="padding: 50px; text-align: center;">
+    <h2>Who Is Kubera?</h2>
+    <p>Kubera, the Hindu god of wealth, is known in ancient scriptures for his exceptional financial wisdom. In fact, even other gods borrow money from him for events like weddings and special occasions! His wealth is so vast that he owns his own personal palatial flight, Pushpaka Vimana. Inspired by Kubera’s wisdom, our mission is to help every reader of this website master their money and learn how to grow their wealth. Join us on this exciting journey to financial success!</p>
+  </section>
 
 </body>
 </html>
